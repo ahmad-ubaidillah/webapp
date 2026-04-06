@@ -59,7 +59,7 @@ jobs:
 
       - name: Install Glance
         run: |
-          pip install glance
+          pip install -e git+https://github.com/ahmad-ubaidillah/glance.git
 
       - name: Run Glance
         env:
@@ -70,4 +70,4 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          python -m glance || true
+          python -c "from glance.orchestrator import main; main()" || true
