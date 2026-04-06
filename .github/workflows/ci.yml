@@ -59,7 +59,7 @@ jobs:
 
       - name: Install Glance
         run: |
-          pip install -e git+https://github.com/ahmad-ubaidillah/glance.git
+          pip install -e git+https://github.com/ahmad-ubaidillah/glance.git#egg=glance
 
       - name: Run Glance
         env:
