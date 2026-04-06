@@ -57,6 +57,11 @@ def delete_user(user_id):
     return jsonify({"message": "User deleted"}), 200
 
 
+@app.route("/api/debug")
+def debug():
+    return jsonify({"users": users, "posts": posts})
+
+
 @app.route("/api/posts", methods=["GET"])
 def get_posts():
     return jsonify(list(posts.values()))
