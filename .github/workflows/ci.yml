@@ -70,7 +70,7 @@ jobs:
           LLM_MODEL: glm-5
           LLM_BASE_URL: https://api.z.ai/api/coding/paas/v4
           # ============================
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || github.token }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
